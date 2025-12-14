@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS KZT - Админ-панель</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Страница авторизации админа -->
+    <div id="adminLoginPage" class="page">
+        <div class="container">
+            <h1 class="logo">GS KZT - Админ</h1>
+            <div class="login-card">
+                <h2>Авторизация администратора</h2>
+                <form id="adminLoginForm">
+                    <div class="form-group">
+                        <label for="adminUsername">Логин</label>
+                        <input type="text" id="adminUsername" name="adminUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminPassword">Пароль</label>
+                        <input type="password" id="adminPassword" name="adminPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Войти</button>
+                </form>
+                <div id="adminLoginMessage" class="message"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Админ-панель -->
+    <div id="adminPanel" class="page hidden">
+        <div class="container">
+            <header>
+                <h1 class="logo">GS KZT - Админ-панель</h1>
+                <button id="adminLogoutBtn" class="btn btn-secondary">Выйти</button>
+            </header>
+            <div class="admin-content">
+                <h2>Все данные пользователей</h2>
+                <div id="adminStats" class="stats"></div>
+                <div id="usersData" class="users-list">
+                    <p class="empty-message">Нет данных пользователей</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
+
